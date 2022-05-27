@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220527082119">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hystmodal@0.5.1/dist/hystmodal.min.css?_v=20220527082119">
+	<script src="https://cdn.jsdelivr.net/npm/hystmodal@0.5.1/dist/hystmodal.min.js?_v=20220527082119"></script>
+</head>
+
+<body>
+	<div class="wrapper wrapper__hero">
+
+		<main class="page">
+			<div class="__container">
+				<div class="" style="display: flex; gap: 20px; margin-top: 40px;">
+
+					<!-- Кнопки вызова модальных окон -->
+					<a href="#" class="btn__default" data-hystmodal="#feedback">Модальное окно 1</a>
+					<a href="#" class="btn__default" data-hystmodal="#success">Модальное окно 2</a>
+
+				</div>
+
+				<!-- Модальное окно задать вопрос -->
+				<div class="modal hystmodal" id="feedback" aria-hidden="true">
+					<div class="hystmodal__wrap">
+						<div class="hystmodal__window" role="dialog" aria-modal="true">
+							<button data-hystclose class="hystmodal__close">Закрыть</button>
+							<div class="modal__body">
+								<h1 class="modal__title">Задать вопрос</h1>
+								<p class="modal__text">
+									Просто оставьте ваши контакты и ваш вопрос.<br />
+									Мы ответим вам в ближайшее время.
+								</p>
+								<form action="">
+									<div class="modal__input">
+										<label for="inputName">Ваше имя</label>
+										<input autocomplete="off" type="text" name="form[]" placeholder="Александр" class="input" id="inputName" required />
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13 16.25C16.5899 16.25 19.5 13.3399 19.5 9.75C19.5 6.16015 16.5899 3.25 13 3.25C9.41015 3.25 6.5 6.16015 6.5 9.75C6.5 13.3399 9.41015 16.25 13 16.25Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+											<path d="M3.14746 21.9365C4.14639 20.2075 5.58274 18.7718 7.31222 17.7736C9.0417 16.7754 11.0034 16.25 13.0003 16.25C14.9971 16.25 16.9588 16.7755 18.6883 17.7737C20.4177 18.7719 21.854 20.2077 22.8529 21.9368" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+										</svg>
+									</div>
+									<div class="modal__input">
+										<label for="inputMail">Электронная почта</label>
+										<input autocomplete="off" type="email" name="form[]" placeholder="name@mail.com" class="input" id="inputMail" required />
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.25 5.6875H22.75V19.5C22.75 19.7155 22.6644 19.9222 22.512 20.0745C22.3597 20.2269 22.153 20.3125 21.9375 20.3125H4.0625C3.84701 20.3125 3.64035 20.2269 3.48798 20.0745C3.3356 19.9222 3.25 19.7155 3.25 19.5V5.6875Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M22.75 5.6875L13 14.625L3.25 5.6875" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+									<div class="modal__input _area">
+										<label for="inputQuestion">Ваш вопрос</label>
+										<textarea class="input-text" placeholder="Меня интересует..." name="" id="" cols="30" rows="6" id="inputQuestion"></textarea>
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M13 22.75C18.3848 22.75 22.75 18.3848 22.75 13C22.75 7.61522 18.3848 3.25 13 3.25C7.61522 3.25 3.25 7.61522 3.25 13C3.25 18.3848 7.61522 22.75 13 22.75Z" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M13 19.0938C13.4487 19.0938 13.8125 18.73 13.8125 18.2812C13.8125 17.8325 13.4487 17.4688 13 17.4688C12.5513 17.4688 12.1875 17.8325 12.1875 18.2812C12.1875 18.73 12.5513 19.0938 13 19.0938Z" fill="black" />
+											<path d="M13 14.625V13.8125C13.5624 13.8125 14.1123 13.6457 14.5799 13.3332C15.0476 13.0208 15.412 12.5766 15.6273 12.057C15.8425 11.5374 15.8988 10.9656 15.7891 10.414C15.6794 9.86233 15.4085 9.35562 15.0108 8.95792C14.6131 8.56021 14.1064 8.28937 13.5548 8.17964C13.0032 8.06992 12.4314 8.12623 11.9117 8.34147C11.3921 8.55671 10.948 8.9212 10.6355 9.38885C10.323 9.8565 10.1562 10.4063 10.1562 10.9688" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+									</div>
+
+									<div class="modal__check">
+										<input type="checkbox" class="checkbox" id="modalCheck" required />
+										<label for="modalCheck">Я соглашаюсь с условиями
+											<a href="">Пользовательского соглашения</a></label>
+									</div>
+
+									<button type="submit" class="btn__modal">Отправить вопрос</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Модальное окно успешная отправка вопроса -->
+				<div class="modal hystmodal" id="success" aria-hidden="true">
+					<div class="hystmodal__wrap">
+						<div class="hystmodal__window" role="dialog" aria-modal="true">
+							<button data-hystclose class="hystmodal__close">Закрыть</button>
+							<div class="modal__body">
+								<h1 class="modal__title">
+									Отлично!<br />
+									Ваша заявка<br />
+									принята
+								</h1>
+								<form action="">
+									<div class="modal__success">
+										<picture><source srcset="img/modal-success.webp" type="image/webp"><img src="img/modal-success.png" alt="" /></picture>
+										<p>
+											В течении 30 минут наш менеджер ответит на ваш вопрос. Ответ на
+											вопрос придет на вашу электронную почту.
+										</p>
+									</div>
+									<button type="button" class="btn__modal" data-hystclose>Прекрасно</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+
+	</div>
+	<script src="js/app.min.js?_v=20220527082119"></script>
+</body>
+
+</html>
